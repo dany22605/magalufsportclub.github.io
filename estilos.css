@@ -201,7 +201,7 @@ body {
   
    #reservas {
     position: relative; /* Necesario para que el contenido se superponga al fondo */
-    background-image: url('/imagenCLUB.jpeg'); /* Cambia la ruta por la de tu imagen */
+    background-image: url('imagenCLUB.jpeg'); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -306,7 +306,7 @@ body {
     position: relative;
     text-align: center;
     padding: 50px 20px;
-    background-image: url('/CampoFutbol.jpg');
+    background-image: url('CampoFutbol.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -449,7 +449,7 @@ body {
   .banner {
     width:1550px;
     height: 200px;
-    background-image: url('/imagenCabecera.jpeg');
+    background-image: url('imagenCabecera.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -567,7 +567,7 @@ body {
   .banner-nosotros{
     width: 100%;
     height: 200px;
-    background-image: url('/imagenCabecera.jpeg');
+    background-image: url('imagenCabecera.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -618,13 +618,13 @@ body {
       margin-bottom: 10px;
   }
   
-  #servicios li:nth-child(1)::before { background-image: url('/bano.png'); }
-  #servicios li:nth-child(2)::before { background-image: url('/cafe.png'); }
-  #servicios li:nth-child(3)::before { background-image: url('/estacionamiento.png'); }
-  #servicios li:nth-child(4)::before { background-image: url('/tienda.png'); }
-  #servicios li:nth-child(5)::before { background-image: url('/CampoFutbol.jpg'); }
-  #servicios li:nth-child(6)::before { background-image: url('/CampoFutbol.jpg'); }
-  #servicios li:nth-child(7)::before { background-image: url('/CampoFutbol.jpg'); }
+  #servicios li:nth-child(1)::before { background-image: url('bano.png'); }
+  #servicios li:nth-child(2)::before { background-image: url('cafe.png'); }
+  #servicios li:nth-child(3)::before { background-image: url('estacionamiento.png'); }
+  #servicios li:nth-child(4)::before { background-image: url('tienda.png'); }
+  #servicios li:nth-child(5)::before { background-image: url('CampoFutbol.jpg'); }
+  #servicios li:nth-child(6)::before { background-image: url('CampoFutbol.jpg'); }
+  #servicios li:nth-child(7)::before { background-image: url('CampoFutbol.jpg'); }
   #equipo {
     text-align: center;
     padding: 50px 10%;
@@ -667,7 +667,7 @@ body {
   .banner-clases{
     width: 100%;
     height: 200px;
-    background-image: url('/imagenCabecera.jpeg');
+    background-image: url('imagenCabecera.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -748,7 +748,7 @@ body {
   .banner-contacto{
     width: 100%;
     height: 200px;
-    background-image: url('/imagenCabecera.jpeg');
+    background-image: url('imagenCabecera.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -849,7 +849,7 @@ body {
   .banner-galeria{
     width: 100%;
     height: 200px;
-    background-image: url('/imagenCabecera.jpeg');
+    background-image: url('imagenCabecera.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
