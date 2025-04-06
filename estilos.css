@@ -1,0 +1,1026 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  h1, h2{
+    font-family: 'Merriweather', sans-serif;
+  }
+  /* Reinicia márgenes y rellenos para el menú */
+  nav {
+    margin: 0;
+    padding: 0;
+    position: fixed; /* Fija el menú arriba */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #14293d; /* Fondo negro con opacidad */
+    z-index: 1000; /* Asegura que el menú esté siempre arriba */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    padding: 10px 20px; /* Ajusta el espacio interno */
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor del menú */
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1002;
+  
+  }
+  
+  /* Logo */
+  .logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    max-width: 150px; /* Evita que sea demasiado grande */
+  }
+  
+  /* Menú */
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Permite que el menú se ajuste al espacio */
+    justify-content: center; 
+    z-index: 1002;/* Centra el menú entre logo e ícono */
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Ícono de Instagram */
+  .social-icon {
+    position: relative; /* Permite que el enlace sea clickeable */
+    z-index: 20; /* Asegura que el ícono esté por encima de otros elementos */
+  }
+  
+  .social-icon img {
+    height: 30px;
+    width: 30px;
+    /* Cambia el color del ícono a blanco (opcional) */
+  }
+  
+  /* Alineación general */
+  nav ul, .logo, .social-icon {
+    align-items: center;
+  }
+  
+  /* Estilos de cabecera */
+  .hero {
+    position: relative; /* Esto permite colocar el texto encima de la imagen */
+    width: 100%;
+    overflow: hidden; /* Evita que la imagen se desborde si es más grande que el contenedor */
+  }
+  
+  .hero .img-cabecera {
+    width: 100%; /* La imagen ocupa todo el ancho de la página */
+    object-fit: cover; /* La imagen cubre todo el área, sin distorsión */
+    height: 300px; /* El alto de la imagen lo ajustarás manualmente según lo necesites */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilo para el texto encima de la imagen */
+  .hero h1, .hero p {
+    position: absolute;
+    top: 50%; /* Centra verticalmente el texto */
+    left: 50%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta el texto para que quede perfectamente centrado */
+    color: white; /* El texto en blanco para que sea visible */
+    text-align: center; /* Centra el texto */
+    z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+  }
+  
+  .hero h1 {
+    font-size: 3rem; /* Tamaño del título */
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.2rem; /* Tamaño del párrafo */
+    margin-top: 50px;
+  }
+  
+  /* Botón dentro de la imagen */
+  .hero .btn {
+    background: #0056b3;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    position: absolute; /* Coloca el botón sobre la imagen */
+    bottom: 30px; /* Ajusta la posición del botón hacia el fondo de la imagen */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Centra el botón */
+  }
+  #inicio {
+    margin: 50px 100px;
+  }
+  
+  .contenido-inicio {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .img-bienvenida {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  #inicio p {
+    font-size: 20px;
+    text-align: justify;
+    margin:auto;
+  
+    padding:30px;
+  }
+  
+  .texto-inicio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Añade espacio entre los elementos */
+  }
+  
+  .btn-saber-mas {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-saber-mas:hover {
+    background-color: #e4bb56;
+  }
+  
+  /* Secciones */
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 1rem;
+  }
+  /* RESERVA
+   */
+  
+   #reservas {
+    position: relative; /* Necesario para que el contenido se superponga al fondo */
+    background-image: url('/imagenCLUB.jpeg'); /* Cambia la ruta por la de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Cambia el color del texto para que sea legible sobre la imagen */
+    padding: 50px 20px; /* Espacio interno para el contenido */
+    z-index: 0; /* Mantiene la imagen en el fondo */
+  }
+  
+  /* Para agregar un efecto de opacidad al fondo */
+  #reservas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color semitransparente (negro con opacidad) */
+    z-index: -1; /* Envía el pseudo-elemento detrás del contenido */
+  }
+  .btn-reserva {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  
+  .btn-reserva:hover {
+    background-color: #e4bb56;
+  }
+  
+  .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+  }
+  .card{
+    width: 200px;
+    background-color: #f8f9fa;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  } 
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .card img{
+    width: 100%;
+    height: auto;
+  } 
+  .card-content h3{
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .card-content p{
+    color:#666;
+    font-size: 15px;
+    line-height:1.3;
+  }
+  .card-content .btn{
+    display: inline-block;
+    padding: 8px 16;
+    background-color: #0056b3;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top:16px;
+    color:#fff;
+  }
+  
+  /* Pie de página */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  /* QUE OFRECEMOS */
+  #ofrecemos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  
+  #ofrecemos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* SECCION FUTBOL */
+  #futbol7 {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('/CampoFutbol.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  
+  #futbol7::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+    z-index: 1;
+  }
+  
+  /* Nueva clase para que el contenido esté por encima */
+  .futbol-overlay {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Ajuste de color para el H2 */
+  .futbol-overlay h2 {
+    color: #fff;
+  }
+  
+  .futbol-container {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .texto-futbol {
+    max-width: 500px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  
+  .btn-reserva3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 150px;
+  }
+  
+  
+  .btn-reserva3:hover {
+    background-color: #e4bb56;
+  }
+  
+  /* Estilos para la sección de contacto */
+  #contacto {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  
+  .mapa iframe {
+    width: 100%;
+    height: 100%;
+    max-width: 600px; /* Tamaño máximo del mapa */
+    border: none;
+  }
+  .mapa{
+    width: 1100px;
+    height: 300px;
+  }
+   .mapa iframe {
+      max-width: 100%;
+    }
+    .contact-info {
+      display:flex;
+      gap:40px;
+      max-width: 100%;
+      text-align: center;
+      margin-top:20px;
+      justify-content:space-between;
+    }
+  
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom:30px;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  #patrocinadores {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  #patrocinadores h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .patrocinadores-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .patrocinadores-container img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .patrocinadores-container img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* PAGINA TARIFAS  */
+  .banner {
+    width:1550px;
+    height: 200px;
+    background-image: url('/imagenCabecera.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-left:-50px;
+  }
+  
+  .banner h1 {
+    position: relative;
+    z-index: 1;
+  }
+  .tarifas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+  }
+  .tarifa-card {
+    background: #14293d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .tarifa-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  .tarifa-box {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .tarifas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .tarifa-box h3 {
+    margin-bottom: 10px;
+    color: #0056b3;
+  }
+  
+  /* SECCION NOSOTROS */
+  .pag-nosotros{
+    margin-top:80px
+  }
+  
+  .seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+  }
+  
+  .seccion img {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 10px;
+  }
+  
+  .contenido {
+    width: 50%;
+  }
+  
+  .contenido p {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px;
+  }
+  
+  /* Primera sección - Imagen a la izquierda, texto a la derecha */
+  #quienes-somos {
+    flex-direction: row-reverse;
+  }
+  #quienes-somos p {
+    font-size: 20px;
+    text-align: justify;
+    margin:auto;
+  
+    padding:30px;}
+  
+  
+  /* Segunda sección - Texto a la izquierda, imagen a la derecha */
+  #mucho-mas {
+    flex-direction: row-reverse;
+  }
+  #mucho-mas p{
+    font-size: 20px;
+    text-align: justify;
+    margin:auto;
+  
+    padding:30px;
+  }
+  
+  
+  /* Tercera sección - Imagen a la izquierda, texto a la derecha */
+  .banner-nosotros{
+    width: 100%;
+    height: 200px;
+    background-image: url('/imagenCabecera.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-top:-7px;
+  }
+  #servicios {
+    flex-direction: row-reverse;
+  }
+  #servicios p{
+    font-size: 20px;
+    text-align: justify;
+    margin:auto;
+  
+    padding:30px;}
+    #servicios ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+  
+  #servicios li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 18px;
+      margin: 10px;
+      width: 120px;
+  }
+  
+  #servicios li::before {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 10px;
+  }
+  
+  #servicios li:nth-child(1)::before { background-image: url('/bano.png'); }
+  #servicios li:nth-child(2)::before { background-image: url('/cafe.png'); }
+  #servicios li:nth-child(3)::before { background-image: url('/estacionamiento.png'); }
+  #servicios li:nth-child(4)::before { background-image: url('/tienda.png'); }
+  #servicios li:nth-child(5)::before { background-image: url('/CampoFutbol.jpg'); }
+  #servicios li:nth-child(6)::before { background-image: url('/CampoFutbol.jpg'); }
+  #servicios li:nth-child(7)::before { background-image: url('/CampoFutbol.jpg'); }
+  #equipo {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f8f8f8;
+  }
+  
+  .equipo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .miembro {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .miembro img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  .miembro img:hover {
+    transform: scale(1.1);
+  }
+  
+  .miembro h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .miembro p {
+    font-size: 1em;
+    color: #666;
+  }
+  /* CSS CLASES */
+  .banner-clases{
+    width: 100%;
+    height: 200px;
+    background-image: url('/imagenCabecera.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-top:60px;
+  }
+  
+  .container-clases {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  
+    text-align: center;
+  }
+  
+  .clases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 230px;
+    margin-top: 150px;
+    margin-left:100px;
+    margin-bottom:40px;
+  }
+  
+  .clase {
+   width: 350px;
+    background-color: #f8f9fa;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin-top:-70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  }
+  
+  .clase img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .clase img:hover {
+    transform: scale(1.05);
+  }
+  
+  .clase p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px; 
+    margin-left:10px;
+    margin-right:10px;/* Espacio entre párrafo y lista */
+    
+  }
+  
+  .clase ul {
+    padding-left: 10px; /* Asegura alineación con el párrafo */
+    margin-bottom: 20px; /* Evita márgenes extra */
+    list-style-type: disc;
+  }
+  
+  .clase li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px; /* Espacio entre elementos de la lista */
+    margin-left:10px;
+    margin-right:10px;
+  }
+  
+  /* PAGINA CONTACTO */
+  .banner-contacto{
+    width: 100%;
+    height: 200px;
+    background-image: url('/imagenCabecera.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-top:60px;
+  }
+  .contacto-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 50px auto;
+  }
+  
+  .contacto-page img {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .formulario-contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formulario-contenido h1 {
+    margin: 0;
+  }
+  
+  .formulario-contenido p {
+    margin: 0 0 20px 0;
+  }
+  
+  .formulario-contenido form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contacto-page label {
+    font-weight: bold;
+  }
+  
+  .contacto-page input,
+  .contacto-page textarea {
+    width: 450px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .contacto-page textarea {
+    max-width: 450px;
+  }
+  .contacto-page button {
+    background-color: #28a745;
+   width: 250px;
+   margin: auto;
+   margin-top: 10px;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contacto-page button:hover {
+    background-color: #218838;
+  }
+  /* GALERIA */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+  
+  }
+  .img-gal{
+    border-radius: 10px;
+    transition: .3s ease;
+    width: 300px;
+    height: 250px;
+    margin: 70px auto;
+    
+  }
+  .img-gal:hover{
+    transform: scale(1.1);
+  }
+  
+  .banner-galeria{
+    width: 100%;
+    height: 200px;
+    background-image: url('/imagenCabecera.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-top:60px;
+  
+  }
+  
+  
+  /* Estilos para móviles */
+  @media (max-width: 768px) {
+    /* Ajustes del menú de navegación */
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    /* Ajustes de la cabecera */
+    .hero h1 {
+      font-size: 2rem; /* Ajusta el tamaño del título en dispositivos móviles */
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Ajusta el tamaño del párrafo en dispositivos móviles */
+    }
+  
+    .hero .btn {
+      font-size: 0.9rem; /* Ajusta el tamaño del botón en dispositivos móviles */
+      padding: 8px 15px;
+    }
+   
+  
+    /* Ajustes de las secciones */
+    section {
+      padding: 30px 10px;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  
+    .img-bienvenida {
+      height: 200PX;
+    }
+    .contenido-inicio {
+      flex-direction: column; /* Coloca los elementos en una columna */
+      align-items: center; /* Centra el contenido */
+    }
+    #inicio p {
+      font-size: 1rem; /* Texto más pequeño para móviles */
+    }
+  
+    .btn-saber-mas {
+      width: 80%; /* Botón más ancho para móviles */
+      text-align: center;
+    }
+    .contact-info {
+      flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 20px; /* Limita el tamaño de la sección de contacto */
+  
+   }
+   .mapa{
+    width: 100%;
+   }
+   .seccion {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .seccion img {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contenido {
+    width: 90%;
+  }
+  
+   #mucho-mas {
+    flex-direction: column;
+  }
+  #quienes-somos, #servicios {
+    flex-direction: column-reverse;
+    
+  }
+  #servicios ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contacto-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contacto-page img,
+  .formulario-contenido {
+    width: 100%;
+  }
+  
+  .formulario-contenido {
+    text-align: center;
+  }
+  .contacto-page img{
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  .formulario-contenido form {
+    width: 100%;
+    text-align: left;
+    margin-left:20px;
+  
+  }
+  .contacto-page button{
+    margin-left:120px;
+  }
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .img-gal {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  .banner-galeria {
+    height: 150px;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+  }
+  
+  
+    /* Ajustes del pie de página */
+    footer {
+      font-size: 0.9rem;
+    }
+  
+    /* Ajustes de la sección de contacto */
+  
+   
+    
+  
+    .btn-saber-mas2 {
+      width: 80%;
+      text-align: center;
+    }
+   
+  
+  
